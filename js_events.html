@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <button onclick='document.getElementById("demo").innerHTML = Date();'>The time is?</button>
+    <p id="demo"></p>
+    <button onclick='this.innerHTML = Date();'>The time is?</button><br><br>
+    <button onmouseover='this.innerHTML = Date();'>The time is?</button>
+    <button onmouseover='document.getElementById("demo2").innerHTML = "Hello";'>Hover to print Hello</button>
+    <button onmouseout='document.getElementById("demo2").innerHTML = "Bye Bye";'>Mouse out to print Bye Bye</button>
+    <button onkeydown='document.getElementById("demo2").innerHTML = "Exit!";'>Press any key</button>
+    <p id="demo2"></p>
+</body>
+</html>

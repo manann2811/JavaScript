@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <p id="demo15"></p>
+    <p id="demo16"></p>
+    <p id="demo17"></p>
+    <p id="demo18"></p>
+    <p id="demo19"></p>
+    <p id="demo20"></p>
+    <p id="demo21"></p>
+    <p id="demo22"></p>
+    <p id="demo23"></p>
+<script>
+    //Javascript String Length
+    let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    document.getElementById("demo").innerHTML = text.length;
+</script> 
+<script>
+    //Extracting String Parts
+    //1. Slice
+    let fruits = "apple, banana, kiwi"
+    document.getElementById("demo1").innerHTML = fruits.slice(6, 13);
+    document.getElementById("demo2").innerHTML = fruits.slice(-4);
+    //2. Substring
+    document.getElementById("demo3").innerHTML = fruits.substring(7);  //Negative Values are not allowed.
+    //3. Substr
+    document.getElementById("demo4").innerHTML = fruits.substr(7, 4);
+</script>
+<script>
+    //Replacing String Content
+    let line = "Welcome to Shark Tank!";
+    let newLine = line.replace("Shark Tank!", "Lenskart!");
+    document.getElementById("demo5").innerHTML = line;
+    document.getElementById("demo6").innerHTML = newLine;
+
+    //Removing Case Sensitivity
+    let statement = "Welcome to Microsoft!";
+    let newStatement = statement.replace(/MICROSOFT/i, "Lenskart");
+    document.getElementById("demo7").innerHTML = statement;
+    document.getElementById("demo8").innerHTML = newStatement;
+
+    //Replacing globally
+    let string = "Hello Microsoft and Microsoft";
+    let newString = string.replace(/Microsoft/g, "User");
+    document.getElementById("demo9").innerHTML = string;
+    document.getElementById("demo10").innerHTML = newString;
+</script>
+<script>
+    //Converting to Upper Case
+    let text1 = "Hello World";
+    let text2 = text1.toUpperCase();
+    document.getElementById("demo11").innerHTML = text1;
+    document.getElementById("demo12").innerHTML = text2;
+
+    //Converting to Lower Case
+    let text3 = "HELLO WORLD";
+    let text4 = text3.toLowerCase();
+    document.getElementById("demo13").innerHTML = text3;
+    document.getElementById("demo14").innerHTML = text4;
+</script>
+<script>
+    //Javascript String Concat
+    let string1 = "Hello";
+    let string2 = "World";
+    let newString1 = string1.concat(" ", string2);
+    document.getElementById("demo15").innerHTML = newString1;
+</script>
+<script>
+    //String trim --> Removes White Spaces
+    let text5 = "       Hello World       ";
+    let text6 = text5.trim();
+    document.getElementById("demo16").innerHTML = text5.length;
+    document.getElementById("demo17").innerHTML = text6.length;
+</script>
+<script>
+    //String padStart
+    let text7 = "5";
+    let padded = text7.padStart(6, 0);
+    let padded1 = text7.padEnd(6, 0);
+    document.getElementById("demo18").innerHTML = padded;
+    document.getElementById("demo19").innerHTML = padded1;
+</script>
+<script>
+    //Extracting String Characters
+    //1. charAt  --> Returns the character
+    let text8 = "Hello"
+    let char = text8.charAt(0);
+    document.getElementById("demo20").innerHTML = char;
+
+    //2. charCodeAt  --> Returns the UTF_16 Code
+    let code = text8.charCodeAt(0);
+    document.getElementById("demo21").innerHTML = code;
+    
+    //3. Property Access []  --> Little Unpredictable
+    let characcess = text8[0];
+    document.getElementById("demo22").innerHTML = characcess;
+</script>
+<script>
+    //Converting String to array
+    //Javascript String Split
+    let text9 = "a,b,c,d,e";
+    const array = text9.split(",");
+    document.getElementById("demo23").innerHTML = array[0]; 
+</script>
+</body>
+</html>

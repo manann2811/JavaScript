@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <p id="demo15"></p>
+    <p id="demo16"></p>
+    <p id="demo17"></p>
+    <p id="demo18"></p>
+    <p id="demo19"></p>
+    <p id="demo20"></p>
+<script>
+    //Floating Precison
+    let x = 0.1;
+    let y = 0.2;
+    let z =  x + y;
+    document.getElementById("demo").innerHTML = z;  
+    
+    let zNew = ((0.1 * 10) + (0.2 * 10))/10;
+    document.getElementById("demo1").innerHTML = zNew;  
+
+    let a = "100";
+    let b = "10";
+    document.getElementById("demo2").innerHTML = a/b;
+    //All operations will work except the + operator
+
+    //NaN
+    let p = 3;
+    let q = "Apple";
+    document.getElementById("demo3").innerHTML = p/q;
+
+    let r = p/q;
+    document.getElementById("demo4").innerHTML = isNaN(r);
+
+    let l = NaN;
+    let m = 5;
+    document.getElementById("demo5").innerHTML = l + m;
+    
+    let n = "5";
+    document.getElementById("demo6").innerHTML = l + n;
+
+    //typeof NaN
+    document.getElementById("demo7").innerHTML = typeof(NaN);
+
+    //Infinity
+    let myNumber = 2;
+    let txt = "";
+    while (myNumber != Infinity) {
+        myNumber *= myNumber;
+        txt = txt + myNumber + "<br>";
+    }
+    document.getElementById("demo8").innerHTML = txt;
+
+    //Dividing by 0
+    let c = 2 / 0;
+    let d = -2 / 0;
+    document.getElementById("demo9").innerHTML = c;
+    document.getElementById("demo10").innerHTML = d;
+    
+    document.getElementById("demo11").innerHTML = typeof(Infinity);
+
+
+    //Hexadecimal --> Preceeded by 0x
+    let e = 0xFF;
+    document.getElementById("demo12").innerHTML = e;
+
+    //toString() --> Converts Number to any base
+    let number = 255;
+    document.getElementById("demo13").innerHTML = number;
+    document.getElementById("demo14").innerHTML = number.toString(32);
+    document.getElementById("demo15").innerHTML = number.toString(16);
+    document.getElementById("demo16").innerHTML = number.toString(10);
+    document.getElementById("demo17").innerHTML = number.toString(8);
+    document.getElementById("demo18").innerHTML = number.toString(2);
+</script>
+</body>
+</html>

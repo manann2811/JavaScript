@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+<script>
+    var x = 5;
+    var x = 2;
+    document.getElementById("demo").innerHTML = x;
+</script>
+<script>
+    let y = 4;
+    //let y = 2; Causes Reference error
+    document.getElementById("demo1").innerHTML = y;
+</script>
+<script>
+    //Block Scope
+    var a = 3;
+    {
+        let a = 5;
+    }
+    document.getElementById("demo2").innerHTML = a;
+</script>
+<script>
+    //Block Scope
+    var a = 3;
+    {
+        let a = 5;
+        document.getElementById("demo3").innerHTML = a;
+    }
+</script>
+</body>
+</html>

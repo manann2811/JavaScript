@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <h2>Creating a push button</h2>
+    <button onclick="fruitFunction()">Click to add Lemon!</button>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <p id="demo15"></p>
+    <p id="demo16"></p>
+<script>
+    {
+        //Creating an Array
+        const cars = ["Saab", "Volvo", "BMW"];
+        document.getElementById("demo").innerHTML = cars;
+    }
+
+    {
+        //Multiple Lines
+        const cars = 
+        ["Mercedes",
+        "Volvo",
+        "BMW"
+        ];
+        document.getElementById("demo1").innerHTML = cars;
+    }
+
+    {
+        //Create then provide elements
+        const cars = [];
+        cars[0] = "Audi";
+        cars[1] = "BMW";
+        cars[2] = "Mercedes";
+        document.getElementById("demo2").innerHTML = cars;
+    }
+
+    {
+        const cars = new Array("Saab", "Mercedes", "BMW");
+        document.getElementById("demo3").innerHTML = cars;
+    }
+
+    {
+        const cars = ["BMW", "Volvo", "Audi", "Mercedes"];
+        document.getElementById("demo4").innerHTML = cars[0];
+
+        cars[1] = "Saab";
+        document.getElementById("demo5").innerHTML = cars;
+        
+        //Methods in Array
+        //length
+        document.getElementById("demo6").innerHTML = cars.length;
+
+        //sort()
+        document.getElementById("demo7").innerHTML = cars.sort();
+
+        //Access first element
+        document.getElementById("demo8").innerHTML = cars[0];
+
+        //Access last element
+        document.getElementById("demo9").innerHTML = cars[cars.length - 1];
+    }
+
+    {
+        const fruits = ["Banana", "Orange", "Apple", "Kiwi"];
+        let txt = "<ul>";
+        for(let i=0; i<fruits.length; i++){
+            txt += "<li>" + fruits[i] + "</li>";
+        }
+        txt += "</ul>";
+        document.getElementById("demo10").innerHTML = txt;
+    }
+
+    {
+        //Using forEach()
+        const fruits = ["Banana", "Orange", "Apple", "Kiwi"];
+        let txt = "<ul>";
+        fruits.forEach(myFunction);
+        txt += "</ul>";
+            
+        function myFunction(value) {
+            txt += "<li>" + value + "</li>";
+        }
+        document.getElementById("demo11").innerHTML = txt;
+    }
+
+    {
+        const fruits = ["Banana", "Orange", "Apple", "Kiwi"];
+        document.getElementById("demo12").innerHTML = fruits;
+        function fruitFunction() {
+            fruits.push("Lemon");
+            document.getElementById("demo12").innerHTML = fruits;
+        }
+    }  
+    
+    {
+        //Undefined Holes
+        const fruits = ["Banana", "Orange", "Apple", "Kiwi"];
+        fruits[6] = "Lemon";
+        let txt = "";
+        for(let i=0; i<fruits.length; i++){
+            txt += fruits[i] + "<br>";
+        }
+        document.getElementById("demo13").innerHTML = txt;
+        
+        //Recognizing an array
+        //typeof --> But array is an object
+        document.getElementById("demo14").innerHTML = typeof(fruits);
+
+        //Array.isArray()
+        document.getElementById("demo15").innerHTML = Array.isArray(fruits);
+
+        //instance of --> to check constructor is array or not..
+        document.getElementById("demo16").innerHTML = fruits instanceof Array;
+    }
+</script>
+</body>
+</html>

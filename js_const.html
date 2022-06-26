@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p id="demo"></p>    
+    <p id="demo1"></p>    
+<script>
+    const cars = ["Saab", " Volvo", " BMW"];
+    cars[0] = "Toyota";
+    cars.push(" Audi");
+    document.getElementById("demo").innerHTML = cars;
+
+    //Constant Object
+    const car = {type: "Fiat", Model: "500", price: 200}
+    car.type = "Mercedes";
+    car.owner = "John";
+    document.getElementById("demo1").innerHTML = car.type + " is owned by Mr. " + car.owner;
+</script>
+</body>
+</html>

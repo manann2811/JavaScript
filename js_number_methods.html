@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <p id="demo15"></p>
+    <p id="demo16"></p>
+    <p id="demo17"></p>
+    <p id="demo18"></p>
+    <p id="demo19"></p>
+    <p id="demo20"></p>
+    <p id="demo21"></p>
+    <p id="demo22"></p>
+    <p id="demo23"></p>
+    <p id="demo24"></p>
+    <p id="demo25"></p>
+    <p id="demo26"></p>
+    <p id="demo27"></p>
+    <p id="demo28"></p>
+    <p id="demo29"></p>
+    <p id="demo30"></p>
+    <p id="demo31"></p>
+    <p id="demo32"></p>
+    <p id="demo33"></p>
+<script>
+    //toString()
+    //on literal
+    let x = 5;
+    document.getElementById("demo").innerHTML = x.toString();
+
+    //on variable
+    document.getElementById("demo1").innerHTML = (123).toString();
+
+    //on Expression
+    document.getElementById("demo2").innerHTML = (120 + 3).toString();
+
+    //toExponential
+    let number = 9.656;
+    document.getElementById("demo3").innerHTML = number.toExponential();
+    document.getElementById("demo4").innerHTML = number.toExponential(2);
+    document.getElementById("demo5").innerHTML = number.toExponential(4);
+    document.getElementById("demo6").innerHTML = number.toExponential(6);
+
+    //toFixed()
+    document.getElementById("demo7").innerHTML = number.toFixed(0);
+    document.getElementById("demo8").innerHTML = number.toFixed(2);
+    document.getElementById("demo9").innerHTML = number.toFixed(4);
+    document.getElementById("demo10").innerHTML = number.toFixed(6);
+
+    //toPrecision()
+    document.getElementById("demo11").innerHTML = number.toPrecision(2);
+    document.getElementById("demo12").innerHTML = number.toPrecision(4);
+    document.getElementById("demo13").innerHTML = number.toPrecision(6);
+    document.getElementById("demo14").innerHTML = number.toPrecision(8);
+
+    //valueOf --> No need to use it in your code
+    let y = 120 + 3;
+    document.getElementById("demo15").innerHTML = y.valueOf();
+
+    //Converting Values to numbers
+    //The Number() method
+    document.getElementById("demo16").innerHTML = Number("10");
+    document.getElementById("demo17").innerHTML = Number("10    ");
+    document.getElementById("demo18").innerHTML = Number("  10");
+    document.getElementById("demo19").innerHTML = Number("10.33");
+    document.getElementById("demo20").innerHTML = Number("10, 3");
+    document.getElementById("demo21").innerHTML = Number("John");
+
+    //Converting date to number -> the Number() returns the number of milliseconds since 01.01.1970
+    let p = new Date("1970-01-01");
+    document.getElementById("demo22").innerHTML = Number(p);
+    
+    let q = new Date("1970-01-02");
+    document.getElementById("demo23").innerHTML = Number(q);
+    
+    let r = new Date("2018-01-17");
+    document.getElementById("demo24").innerHTML = Number(r);
+
+    //parseInt()
+    document.getElementById("demo25").innerHTML = 
+    parseInt("10") + "<br>" +
+    parseInt("-10") + "<br>" +
+    parseInt("10    ") + "<br>" +
+    parseInt("  10") + "<br>" +
+    parseInt("10.33") + "<br>" +
+    parseInt("10 6") + "<br>" +
+    parseInt("10 years") + "<br>" +
+    parseInt("years 10");   
+    
+    //parseFloat()
+    document.getElementById("demo26").innerHTML = 
+    parseFloat("10.01") + "<br>" +
+    parseFloat("-10") + "<br>" +
+    parseFloat("10    ") + "<br>" +
+    parseFloat("  10") + "<br>" +
+    parseFloat("10.33") + "<br>" +
+    parseFloat("10 6") + "<br>" +
+    parseFloat("10 years") + "<br>" +
+    parseFloat("years 10");   
+
+    //Number Properties
+    //Max_Value
+    document.getElementById("demo27").innerHTML = Number.MAX_VALUE;
+    //MinValue
+    document.getElementById("demo28").innerHTML = Number.MIN_VALUE;
+    //Positive_Infinity
+    document.getElementById("demo29").innerHTML = Number.POSITIVE_INFINITY;
+    //Negative_Infinity
+    document.getElementById("demo30").innerHTML = Number.NEGATIVE_INFINITY;
+    //NaN
+    document.getElementById("demo31").innerHTML = Number.NaN;
+
+    //Number properties cannot be used on variables
+    let a = 5;
+    document.getElementById("demo32").innerHTML = a.MAX_VALUE;
+    //It will return undefined
+</script>
+</body>
+</html>

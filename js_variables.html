@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Javascript Variables</h2>
+    <p>1. var</p>
+    <p id="demo"></p>
+    <script>
+        var x = 6;
+        var y = 7;
+        var z = x + y;
+        document.getElementById("demo").innerHTML = z;
+    </script>
+    <p>2. let</p>
+    <p id="demo1"></p>
+    <script>
+        let a = 5;
+        let b = 6;
+        let c = a * b;
+        document.getElementById("demo1").innerHTML = c;
+    </script>
+    <p>3. Undeclared</p>
+    <p id="demo2"></p>
+    <script>
+        p = 5;
+        q = 6;
+        r = p + q;
+        document.getElementById("demo2").innerHTML = r;
+    </script>
+    <p>4. Constant</p>
+    <p id="demo3"></p>
+    <script>
+        const m = 15;
+        const n = 6;
+        let l = m + n;
+        document.getElementById("demo3").innerHTML = l;
+    </script>
+    <h2>Declaring a Variable</h2>
+    <p id="demo4" style="font-size: 20px;"></p>
+    <script>
+        var car_name;
+        car_name = "Volvo";
+        document.getElementById("demo4").innerHTML = car_name;
+    </script>
+    <h3>One Statement many Variables</h3>
+    <p id="demo5"></p>
+    <script>
+        var car_name = "Volvo", person = "Joe", price = 200;
+        document.getElementById("demo5").innerHTML = person + " owns a car " + car_name + " costs Rs." + price;
+    </script>
+    <h3>Redeclaring Values</h3>
+    <p id="demo6"></p>
+    <script>
+        var g = 5;
+        var g;
+        document.getElementById("demo6").innerHTML = g;
+    </script>
+    <p id="demo7"></p>
+    <script>
+        let w = 5;
+        let w;
+        document.getElementById("demo7").innerHTML = w;
+    </script>
+
+</body>
+</html>

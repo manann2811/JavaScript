@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h4>forEach()</h4>
+    <p id="demo"></p>
+    <h4>map()</h4>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <h4>filter()</h4>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <h4>reduce()</h4>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <h4>reduceRight()</h4>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <h4>every()</h4>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <h4>some()</h4>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <h4>indexOf()</h4>
+    <p id="demo15"></p>
+    <h4>lastIndexOf()</h4>
+    <p id="demo16"></p>
+    <h4>find()</h4>
+    <p id="demo17"></p>
+    <p id="demo18"></p>
+    <h4>findIndex()</h4>
+    <p id="demo19"></p>
+    <h4>Array.from()</h4>
+    <p id="demo20"></p>
+    <h4>Array.keys()</h4>
+    <p id="demo21"></p>
+    <h4>entries()</h4>
+    <p id="demo22"></p>
+    <h4>includes()</h4>
+    <p id="demo23"></p>
+    <p id="demo24"></p>
+<script>
+    {
+        //forEach()
+        const numbers = [20, 35, 41, 1, 5, 10];
+        let text = "";
+        numbers.forEach(myFunction);
+        document.getElementById("demo").innerHTML = text;
+
+        function myFunction(value){
+            text += value + "<br>";
+        }
+    }
+
+    {
+        //map()
+        const arr1 = [20, 35, 41, 1, 5, 10];
+        const arr2 = arr1.map(map_function);
+
+        function map_function(value){
+            return value *= 2;
+        }
+
+        document.getElementById("demo1").innerHTML = arr1;
+        document.getElementById("demo2").innerHTML = "Multiplied by 2 : <br><br>" + arr2;
+    }
+
+    {
+        //filter
+        const arr1 = [20, 35, 41, 1, 5, 19];
+        document.getElementById("demo3").innerHTML = arr1;
+        const arr2 = arr1.filter(filter_function);
+
+        function filter_function(value){
+            return value > 18;
+        }
+        document.getElementById("demo4").innerHTML = "Filtered value only greater than 18 : <br><br>" + arr2;
+    }
+
+    {
+        //reduce() --> By default start from left
+        const arr1 = [20, 35, 41, 1, 5, 10];
+        document.getElementById("demo5").innerHTML = arr1;
+        let sum = arr1.reduce(reduce_function);
+
+        function reduce_function(total, value){
+            return total += value;
+        }
+        document.getElementById("demo6").innerHTML = "Sum of the elements of array is :<br><br>" + sum;
+    }
+
+    {
+        //reduceRight()--> Starts from right with a initialized value 100
+        const arr1 = [20, 35, 41, 1, 5, 11];
+        document.getElementById("demo7").innerHTML = arr1;
+        let sum = arr1.reduceRight(reduceRight_function, 100);
+
+        function reduceRight_function(total, value){
+            return total += value;
+        }
+        document.getElementById("demo8").innerHTML = "Sum of the elements of array is :<br><br>" + sum;
+    }
+
+    {
+        //every() --> to check every element follows the condition or not
+        const arr1 = [20, 35, 41, 1, 5, 11];
+        document.getElementById("demo9").innerHTML = arr1;
+        document.getElementById("demo10").innerHTML = "All the elements are greater than 18 :<br><br>" + arr1.every(every_function1);
+        document.getElementById("demo11").innerHTML = "All the elements are less than 100 :<br><br>" + arr1.every(every_function2);
+
+        function every_function1(value){
+            return value > 18;
+        }
+
+        function every_function2(value) {
+            return value < 100;
+        }
+    }
+
+    {
+        //some() --> to check that some elements passes the condition or not
+        const arr1 = [20, 35, 41, 1, 5, 11];
+        document.getElementById("demo12").innerHTML = arr1;
+        document.getElementById("demo13").innerHTML = "Some elements are greater than 18 :<br><br>" + arr1.some(some_function1);
+        document.getElementById("demo14").innerHTML = "Some elements are greater than 100 :<br><br>" + arr1.some(some_function2);
+
+        function some_function1(value){
+            return value > 18;
+        }
+
+        function some_function2(value) {
+            return value > 100;
+        }
+    }
+
+    {
+        //indexOf()
+        const array = ["Maple", "Gold", "Silver", "Jack"];
+        document.getElementById("demo15").innerHTML = "The index of Gold in array is " + array.indexOf("Gold");
+    }
+
+    {
+        //lastIndexOf() --> Gives the index of the last occurance of element
+        const array = ["Maple", "Gold", "Silver", "Gold"];
+        document.getElementById("demo16").innerHTML = "The last Gold index is " + array.lastIndexOf("Gold");
+    }
+
+    {
+        //find() --> to find the first element that follows the condition
+        const numbers = [20, 35, 41, 1, 5, 10];
+        let x = numbers.find(find_function);
+        document.getElementById("demo17").innerHTML = numbers;
+
+        function find_function(value){
+            return value > 30;
+        }
+        document.getElementById("demo18").innerHTML = "The first element greater than 30 is :<br><br>" + x;
+
+        //findIndex()
+        let y = numbers.findIndex(findIndex_function);
+        function findIndex_function(value){
+            return value > 30;
+        }
+        document.getElementById("demo19").innerHTML = "The index of the first element greater than 30 is :<br><br>" + y;
+    }
+
+    {
+        //Array.from() --> converts a string to the array object
+        let string = "ABCDEFG";
+        let new_string = Array.from(string);
+        document.getElementById("demo20").innerHTML = new_string;
+    }
+
+    {
+        //Array.keys() --> returns object array iterator so need to print using for loop
+        const fruits = ["Banana", "Apple", "Orange", "Mango"];
+        let keys = fruits.keys();
+
+        document.getElementById("demo21").innerHTML = display_iterator();
+
+        function display_iterator(){
+            let txt = "";
+            for(let x of keys){
+                txt += x + "<br>";
+            }
+            return txt;
+        }
+    }
+
+    {
+        //entries --> returns object array iterator so need to print using for loop
+        const fruits = ["Banana", "Apple", "Orange", "Mango"];
+        let fruit = fruits.entries();
+
+        let text = "";
+        for(let x of fruit){
+            text += x + "<br>";
+        }
+        document.getElementById("demo22").innerHTML = text;
+    }
+
+    {
+        //includes --> checks wheather element is present in the array or not
+        const fruits = ["Banana", "Apple", "Orange", "Mango"];
+        document.getElementById("demo23").innerHTML = "Mango is present in array :<br><br>" + fruits.includes("Mango");
+        document.getElementById("demo24").innerHTML = "Kiwi is present in array :<br><br>" + fruits.includes("Kiwi");
+    }
+</script>
+</body>
+</html>

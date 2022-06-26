@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <p id="demo15"></p>
+    <p id="demo16"></p>
+    <p id="demo17"></p>
+    <p id="demo18"></p>
+    <p id="demo19"></p>
+    <p id="demo20"></p>
+    <p id="demo21"></p>
+    <p id="demo22"></p>
+<script>
+    {
+        //toString() --> Converts an array to string
+        const fruits = ["Banana", "Apple", "Orange", "Mango"];
+        document.getElementById("demo").innerHTML = fruits.toString();
+
+        //join()
+        document.getElementById("demo1").innerHTML = fruits.join(" * ");
+
+        //pop method
+        let fruit_pop = fruits.pop();
+        document.getElementById("demo2").innerHTML = fruits;
+
+        //Using pop to get the popped out element
+        document.getElementById("demo3").innerHTML = fruit_pop;
+
+        //push method
+        let fruit_push = fruits.push("Lemon");
+        document.getElementById("demo4").innerHTML = fruits;
+
+        //Using push to get the length of the new array
+        document.getElementById("demo5").innerHTML = fruit_push;
+
+        //Array Shift
+        let fruit_shift = fruits.shift();
+        document.getElementById("demo6").innerHTML = fruits;
+
+        //Using shift to know the shifted element
+        document.getElementById("demo7").innerHTML = fruit_shift;
+
+        //Array Unshift
+        let fruit_unshift = fruits.unshift("Kiwi", "Litchi");
+        document.getElementById("demo8").innerHTML = fruits;
+
+        //Using unshift to get length of the new array
+        document.getElementById("demo9").innerHTML = fruit_unshift;
+
+        fruits[0] = "Guava";
+        document.getElementById("demo10").innerHTML = fruits;   
+
+        fruits[fruits.length] = "Melon";
+        document.getElementById("demo11").innerHTML = fruits;   
+
+        //Array delete --> But is leaves undefined holes so better use shift or unshift 
+        delete fruits[0];
+        document.getElementById("demo12").innerHTML = fruits;
+    }
+    
+    {
+        //Merging 2 arrays
+        const boys = ["John", "Ryan", "Harry"];
+        const girls = ["Marie", "Gwen"];
+        let children = boys.concat(girls);
+        document.getElementById("demo13").innerHTML = children;
+    }
+
+    {
+        //Merging 3 arrays
+        const arr1 = ["a", "b"];
+        const arr2 = ["c"];
+        const arr3 = ["d", "e", "f"];
+        let total = arr1.concat(arr2, arr3);
+        document.getElementById("demo14").innerHTML = total;
+    }
+
+    {
+        //String concat in array
+        const arr = ["a", "b"];
+        let x = arr.concat("c");
+        document.getElementById("demo15").innerHTML = x;
+    }
+
+    {
+        //Array Splice
+        //splice(0, 2, "a", "b") --> 0 is position, 2 is number of elements to be replaced, further two values are replacements
+
+        //Splice with 0 delete
+        const fruits = ["Apple", "Orange", "Mango", "Kiwi"];
+        fruit_splice = fruits.splice(1, 0, "Banana", "Guava");
+        document.getElementById("demo16").innerHTML = fruits;
+    }
+
+    {
+        //Splice with 2 delete
+        const fruits = ["Apple", "Orange", "Mango", "Kiwi"];
+        fruit_splice = fruits.splice(0, 2, "Banana", "Guava");
+        document.getElementById("demo17").innerHTML = fruits;
+    }
+
+    {
+        //Only delete elements using splice
+        const fruits = ["Apple", "Orange", "Mango", "Kiwi"];
+        fruits_splice= fruits.splice(0, 2);
+        document.getElementById("demo18").innerHTML = fruits;
+    }
+
+    {
+        //Array Slice
+        const fruits = ["Apple", "Orange", "Mango", "Kiwi"];
+        fruits_slice = fruits.slice(1);
+        document.getElementById("demo19").innerHTML = fruits_slice;
+    }
+    
+    {
+        //Array Slice
+        const fruits = ["Apple", "Orange", "Mango", "Kiwi"];
+        fruits_slice = fruits.slice(3);
+        document.getElementById("demo20").innerHTML = fruits_slice;
+    }
+    
+    {
+        //Array Slice --> start to end -> excluding the end value
+        const fruits = ["Apple", "Orange", "Mango", "Kiwi"];
+        fruits_slice = fruits.slice(1, 3);
+        document.getElementById("demo21").innerHTML = fruits_slice;
+    }
+
+    {
+        //Automatic toString --> toString is automatically applied to Arrays and all objects
+        const fruits = ["Apple", "Orange", "Mango", "Kiwi"];
+        document.getElementById("demo22").innerHTML = fruits;
+    }
+</script>
+</body>
+</html>

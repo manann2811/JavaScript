@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <h4>search()</h4>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <h4>startsWith()</h4>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <h4>endsWith()</h4>
+    <p id="demo15"></p>
+    <p id="demo16"></p>
+<script>
+    //indexOf
+    let str = "Please locate where 'locate' occurs!";
+    document.getElementById("demo").innerHTML = str.indexOf("locate");
+    //lastIndexOf
+    document.getElementById("demo1").innerHTML = str.lastIndexOf("locate");
+
+    //indexOf and lastIndexOf returns -1 if the text is not found!
+    document.getElementById("demo2").innerHTML = str.lastIndexOf("John");
+    
+    //indexOf and lastIndexOf accepts a second parameter as the starting position for search
+    document.getElementById("demo3").innerHTML = str.lastIndexOf("locate", 15);
+
+    //indexOf cannot take regular expression so we have
+    //search()
+
+    document.getElementById("demo4").innerHTML = str.search("locate");
+
+    //match()
+    let text = "The rain in the SPAIN stays mainly in plains."
+    document.getElementById("demo5").innerHTML = text.match(/ain/g);
+
+    //global with case insensitive
+    document.getElementById("demo6").innerHTML = text.match(/ain/gi);
+
+    //without global
+    document.getElementById("demo7").innerHTML = text.match("ain");
+
+    //includes()  --> returns true and false
+    document.getElementById("demo8").innerHTML = str.includes("where");
+
+    //includes() with start value
+    document.getElementById("demo9").innerHTML = str.includes("where", 20);
+    document.getElementById("demo10").innerHTML = str.includes("where", 15);
+
+    //startsWith --> returns true if the string begins with word
+    document.getElementById("demo11").innerHTML = str.startsWith("Please")
+    
+    document.getElementById("demo12").innerHTML = str.startsWith("Hello")
+    
+    //A start value
+    document.getElementById("demo13").innerHTML = str.startsWith("locate", 7)
+    document.getElementById("demo14").innerHTML = str.startsWith("locate", 6)
+    
+    //endsWith
+    document.getElementById("demo15").innerHTML = str.endsWith("occurs!")
+    
+    //specifying a length
+    document.getElementById("demo16").innerHTML = str.endsWith("Please", 6)
+</script>
+</body>
+</html>
